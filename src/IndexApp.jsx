@@ -1,25 +1,15 @@
-import { Outlet } from "react-router-dom";
-import "./IndexApp.css"
-import "./Navbar/NavBar"
-import NavBar from "./Navbar/NavBar";
+// src/IndexApp.jsx
+import React from 'react';
+import Navbar from './Navbar/Navbar';
+import { Outlet } from 'react-router-dom'; // Importa Outlet
 
-//funcion flechitas
-const IndexApp = () => {
-
-    return(
+const App = () => {
+    return (
         <>
-
-        <header>
-            <NavBar/>
-        </header>
-        <main>
-            <Outlet/>
-
-        </main>
-       </>
+            <Navbar />
+            <Outlet /> {/* Aquí se renderizarán los componentes de las rutas hijas */}
+        </>
     );
+};
 
-    
-
-}
-export default IndexApp;
+export default App;

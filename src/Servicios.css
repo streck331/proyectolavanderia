@@ -1,0 +1,69 @@
+.servicios {
+    background-color: #000;
+    color: gold;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .titulo {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  .icon-separador {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    border-bottom: 2px solid gold;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contenedor-servicios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .servicio {
+    width: 300px;
+  }
+  
+  .servicio img {
+    width: 100%;
+    border: 5px solid gold;
+  }
+  
+  .servicio h3 {
+    font-family: 'Georgia', serif;
+    margin-top: 10px;
+  }
+  
+  .icono-servicio {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .card {
+    background-color: #111;
+    border: 1px solid gold;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  
+  .card h4 {
+    font-weight: bold;
+    font-size: 1rem;
+    color: gold;
+    margin: 10px 0 5px;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    color: white;
+  }
+  

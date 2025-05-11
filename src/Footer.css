@@ -1,0 +1,32 @@
+.footer {
+    background-color: #000;
+    color: #d4aa36; /* Dorado */
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    height: 110px; /* Ajusta la altura del logo */
+    margin-bottom: 10px;
+  }
+  
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-social-icons a {
+    color: #d4aa36; /* Dorado */
+    font-size: 1.5rem; /* Ajusta el tamaño de los iconos */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+  }
+  
+  .footer-social-icons a:hover {
+    color: white;
+  }
+  
+  .footer-copyright {
+    font-size: 0.9rem;
+  }

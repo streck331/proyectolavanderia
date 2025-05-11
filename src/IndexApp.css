@@ -1,16 +1,167 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: rgb(234, 207, 207);
-    color: whitesmoke;
-    text-align: center;
-
+/* Estilos Generales (los que ya tienes) */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
+.navbar-logo img {
+  height: 60px;
+}
 
-.saludo:hover{
+/* Menú principal */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
 
-    color: aqua;
-    transition: 5s;
-    font-size: 18px;
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #d4aa36; /* Dorado */
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+/* Línea blanca debajo */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  transition: width 0.3s;
+}
+
+/* Hover: cambia color y muestra línea */
+.navbar-links li a:hover {
+  color: white;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Contenedor derecho para íconos y botón */
+.navbar-right-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Íconos sociales */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #d4aa36; /* Dorado */
+  font-size: 1.3rem;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* Botón Reservar */
+.navbar-button button {
+  background-color: #d4aa36;
+  color: black;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar-button button:hover {
+  background-color: #e5c14b;
+}
+
+/* Estilos para pantallas más pequeñas (tablets - ancho máximo de 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px; /* Reducir el padding horizontal */
+    flex-direction: column; /* Apilar logo, enlaces y botón */
+    align-items: flex-start; /* Alinear a la izquierda */
+  }
+
+  .navbar-logo {
+    margin-bottom: 15px; /* Espacio debajo del logo */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Apilar los enlaces */
+    gap: 15px; /* Reducir el espacio entre enlaces */
+    margin-bottom: 15px; /* Espacio debajo de los enlaces */
+    width: 100%; /* Ocupar todo el ancho */
+  }
+
+  .navbar-links li a {
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    padding-bottom: 5px; /* Añadir un poco de espacio inferior */
+    border-bottom: 1px solid #333; /* Separador entre enlaces */
+  }
+
+  .navbar-links li a::after {
+    display: none; /* Ocultar la línea debajo en pantallas pequeñas */
+  }
+
+  .navbar-right-items {
+    flex-direction: column; /* Apilar íconos y botón */
+    align-items: flex-start; /* Alinear a la izquierda */
+    gap: 10px; /* Reducir el espacio entre íconos y botón */
+    width: 100%; /* Ocupar todo el ancho */
+  }
+
+  .social-icons {
+    font-size: 1.1rem; /* Reducir el tamaño de los íconos */
+    gap: 10px;
+  }
+
+  .navbar-button button {
+    font-size: 16px; /* Reducir el tamaño de la fuente del botón */
+    padding: 8px 15px;
+    border-radius: 15px;
+    width: 100%; /* Ocupar todo el ancho */
+    text-align: center; /* Centrar el texto del botón */
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas (móviles - ancho máximo de 480px) */
+@media (max-width: 480px) {
+  .navbar-logo img {
+    height: 50px; /* Reducir aún más el tamaño del logo */
+  }
+
+  .navbar-links li a {
+    font-size: 14px; /* Reducir aún más el tamaño de la fuente */
+  }
+
+  .social-icons {
+    font-size: 1rem; /* Reducir aún más el tamaño de los íconos */
+  }
+
+  .navbar-button button {
+    font-size: 14px; /* Reducir aún más el tamaño de la fuente del botón */
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
 }
